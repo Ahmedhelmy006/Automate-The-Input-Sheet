@@ -92,9 +92,7 @@ class MondaybroadcastFetcher:
 
     def submitBroadCastData(self):
         # Load form and entry mappings manually like form_fields_1
-        path = r'D:\Automate the Inputsheet\data\Forms\Forms.xlsx'
-        forms_file  = pd.read_excel(path)
-        form_url = forms_file['Form Link'][0]
+        form_url = "https://docs.google.com/forms/d/e/1FAIpQLSfXbTrBgq4l_UUcQyduVANjwb1qg6ZZbE7tqMmewezghiBHcA/formResponse"
         form_fields = {
             'Total recipients': 'entry.1805050348',
             'Open rate': 'entry.1597220645',
