@@ -2,14 +2,14 @@ import requests
 from datetime import datetime, timedelta
 from dotenv import load_dotenv
 import os
-from GoogleFormsSubmitter import GoogleFormsSubmitter
+from utils.GoogleFormsSubmitter import GoogleFormsSubmitter
 
 # Load environment variables
 load_dotenv(dotenv_path="D:\Automate the Inputsheet\enviromental_variables.env")
 API_KEY = os.getenv('KIT_V4_API_KEY')
 
 # Weekly Form Fields
-form_url = 'https://docs.google.com/forms/d/e/1FAIpQLScsqYVQ0jrnxVBJlYUL2jghIPSGmeJ-sVPWXLhdbwo8gTm-nw/formResponse'
+form_url = os.getenv('weekly_subs_form_url')
 form_fields= {
     'Number of subs' : 'entry.464579160',
     'Net New Subs' : 'entry.1240621522', 
